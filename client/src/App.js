@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React,{useState, useEffect} from 'react'
+import Login from './Login'
+import Signup from './Signup'
 import './App.css';
 
-function App() {
+function App (){
+
+  const [user, setUser] = useState([])
+
+  useEffect(() => {
+    fetch("/me")
+    .then (res =>{
+      if (res.ok) {
+        res.json()
+        .then (user => {
+          setUser (user)
+        })
+      } else {
+      }
+    })
+    }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div>
+          <Signup user={user} setUser={setUser}/>
+          <Login user={user} setUser={setUser}/>
+      </div>
+  )
 }
 
 export default App;
