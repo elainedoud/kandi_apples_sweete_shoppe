@@ -5,27 +5,35 @@ import './App.css';
 
 function App (){
 
-  const [user, setUser] = useState([])
+  const [user, setUser] = useState({})
 
-  useEffect(() => {
-    fetch("/me")
-    .then (res =>{
-      if (res.ok) {
-        res.json()
-        .then (user => {
-          setUser (user)
-        })
-      } else {
-      }
+useEffect(() => {
+  fetch("/me")
+  .then (res =>{
+    if (res.ok) {
+      res.json()
+      .then (user => {
+        setUser (user)
+      })
+    } else {
+    }
+  })
+  }, [])
+
+  const handleLogout = () => {
+    setUser({})
+    fetch('/logout', {
+      method: 'DELETE'
     })
-    }, [])
+  }
 
   return (
       <div>
-          <Signup user={user} setUser={setUser}/>
           <Login user={user} setUser={setUser}/>
+          <Signup user={user} setUser={setUser}/>
+          <button onClick={handleLogout}>Logout</button>
       </div>
   )
 }
 
-export default App;
+export default App

@@ -3,9 +3,9 @@ import React,{useState} from 'react'
 function Login({user, setUser}) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState('');
+    const [errors, setError] = useState([])
 
-    function handleLogin(e){
+    const handleLogin = (e) =>{
         e.preventDefault();
         fetch("/login", {
             method: "POST",
