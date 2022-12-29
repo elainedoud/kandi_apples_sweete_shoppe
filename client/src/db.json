@@ -1,0 +1,87 @@
+{
+    "Candy": [
+{
+    "id": 1,
+    "name": "Jelly Filled Whales",
+    "image": "http://bit.ly/3WO1T3C",
+    "category": "gummy"
+  },
+
+  {
+    "id": 2,
+    "name": "Wilbur Buds",
+    "image": "http://bit.ly/3Ib24lC",
+    "category": "chocolate"
+  },
+
+  {
+    "id": 3,
+    "name": "Candy Apple",
+    "image": "http://bit.ly/3G5IYL7",
+    "category": "hard-candy"
+  },
+
+  {
+    "id": 4,
+    "name": "Swedish Fish",
+    "image": "http://bit.ly/3Q2EOrZ",
+    "category": "gummy"
+  },
+
+  {
+    "id": 5,
+    "name": "Jelly Beans",
+    "image": "http://bit.ly/3WwzZJN",
+    "category": "chewy"
+  },
+
+  {
+    "id": 6,
+    "name": "Rock Candy",
+    "image": "http://bit.ly/3YW7jvi",
+    "category": "hard-candy"
+  },
+
+  {
+    "id": 7,
+    "name": "Chocolate Covered Pretzels",
+    "image": "http://bit.ly/3Ib2OHq",
+    "category": "chocolate"
+  },
+
+  {
+    "id": 8,
+    "name": "Gummy Eggs",
+    "image": "http://bit.ly/3VtzNcR",
+    "category": "gummy"
+  },
+
+  {
+    "id": 9,
+    "name": "Candy Cane",
+    "image": "http://bit.ly/3VMIaAF",
+    "category": "hard-candy"
+  },
+
+  {
+    "id": 10,
+    "name": "Gummy Sharks",
+    "image": "http://bit.ly/3WOXSvV",
+    "category": "gummy"
+  },
+
+  {
+    "id": 11,
+    "name": "Mints",
+    "image": "http://bit.ly/3vnuQHR",
+    "category": "chewy"
+  },
+
+  {
+    "id": 12,
+    "name": "Salt Water Taffy",
+    "image": "http://bit.ly/3YYh7or",
+    "category": "chewy"
+  }
+]
+}
