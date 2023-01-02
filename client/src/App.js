@@ -30,10 +30,10 @@ useEffect(() => {
 
   return (
       <div>
+          <Candy />
           <Login user={user} setUser={setUser}/>
           <Signup user={user} setUser={setUser}/>
           <button onClick={handleLogout}>Logout</button>
-          <Candy />
       </div>
   )
 }

@@ -1,3 +1,3 @@
 class CandySerializer < ActiveModel::Serializer
-  attributes :name, :image, :category
+  attributes :id, :name, :image, :category
 end
