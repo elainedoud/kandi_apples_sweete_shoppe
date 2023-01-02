@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
-  before_action :check_user
 
   def check_user
     unless current_user
