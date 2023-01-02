@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import Login from './Login'
 import Signup from './Signup'
 import Candy from './Candy'
+import Header from './Header'
 import './App.css';
 
 function App (){
@@ -30,10 +31,11 @@ useEffect(() => {
 
   return (
       <div>
+          <Header />
+          <Candy />
           <Login user={user} setUser={setUser}/>
           <Signup user={user} setUser={setUser}/>
           <button onClick={handleLogout}>Logout</button>
-          <Candy />
       </div>
   )
 }

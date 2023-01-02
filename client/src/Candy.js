@@ -3,19 +3,19 @@ import CandyCard from './CandyCard'
 
 function Candy(){
 
-  const [candy, setCandy] = useState([])
+  const [candies, setCandies] = useState([])
 
   useEffect(() => {
-    fetch("/candy")
+    fetch("http://localhost:4000/candy")
     .then (res => res.json())
-    .then(data => setCandy(data))
+    .then(data => setCandies(data))
   }, [])
 
     return (
         <div>
-            {candy.map((candy)=>{
-                return <CandyCard key={candy.id} candy={candy}/>
-            })}      
+            {candies.map(candy =>{
+               return <CandyCard key={candy.id} candy={candy}/>
+            })}     
         </div>
     );
 }
