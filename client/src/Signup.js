@@ -4,14 +4,32 @@ function Signup({user, setUser}){
     
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const [errors, setErrors] = useState([])
 
-    function handleLogin(e){
+    function handleSubmit(e){
         e.preventDefault();
+        fetch ("/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                username,
+                password
+            }),
+        }).then((r) => {
+            if (r.ok) {
+                r.json().then((user) => setUser(user));
+            } else {
+                r.json().then((err) => setErrors(err.errors));
+            }
+        });
+    
     }
 
     return (
         <div>
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleSubmit}>
             <p>Signup: </p>
             <label htmlFor="username">Username:</label>
             <input 

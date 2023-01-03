@@ -1,15 +1,29 @@
-.App {
-  text-align: center;
+.Candybox {
+  color: black;
+  padding: 0.5em 0.5em 0.5em;
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.name{
+  font-size: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
+.candyimage {
+  height: 75px;
+  width: 50px; 
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.category {
+  font-size: 5px;
+  font-style: italic;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.misc {
+color: black;
+}

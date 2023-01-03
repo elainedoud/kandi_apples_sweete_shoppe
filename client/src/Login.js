@@ -19,21 +19,13 @@ function Login({user, setUser}) {
             if (data.id){
                 setUser(data)
             } else if (data.errors){
-                setError(data.errors)
+                setError(errors)
             }
         })
     }
 
     const handleChangeUsername = e => setUsername(e.target.value)
     const handleChangePassword = e => setPassword(e.target.value)
-
-    if (user && user.id) {
-        return (
-            <div>
-                Already logged in!
-            </div>
-        )
-    }
 
 
     return (

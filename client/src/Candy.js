@@ -6,7 +6,7 @@ function Candy(){
   const [candies, setCandies] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:4000/candy")
+    fetch("/candy")
     .then (res => res.json())
     .then(data => setCandies(data))
   }, [])
