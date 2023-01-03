@@ -3,6 +3,8 @@ import Login from './Login'
 import Signup from './Signup'
 import Candy from './Candy'
 import Header from './Header'
+import NavBar from './NavBar'
+import {Route, Switch} from 'react-router-dom';
 import './App.css';
 
 function App (){
@@ -32,10 +34,17 @@ useEffect(() => {
   return (
       <div>
           <Header />
+          <NavBar />
+            <Switch>
+              <Route path="/login">
+                <Login user={user} setUser={setUser}/>
+                <button onClick={handleLogout}>Logout</button>
+              </Route>
+              <Route path="/signup">
+                <Signup user={user} setUser={setUser}/>
+              </Route>
+            </Switch>
           <Candy />
-          <Login user={user} setUser={setUser}/>
-          <Signup user={user} setUser={setUser}/>
-          <button onClick={handleLogout}>Logout</button>
       </div>
   )
 }

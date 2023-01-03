@@ -24,6 +24,7 @@ function Signup({user, setUser}){
                 r.json().then((err) => setErrors(err.errors));
             }
         });
+
     
     }
 
