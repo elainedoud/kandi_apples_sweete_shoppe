@@ -11,6 +11,8 @@ function Candy(){
     .then(data => setCandies(data))
   }, [])
 
+
+
     return (
         <div>
             {candies.map(candy =>{

@@ -1,14 +1,27 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import {Link} from 'react-router-dom';
 
-const NavBar = () => {
+function NavBar() {
+
     return (
-    /*<div className="navbar">
-        <NavLink to="/">App</NavLink>
-        <NavLink to="/signup">Signup</NavLink>
-        <NavLink to="/login">Login</NavLink>
-    </div>*/
-    <></>
+    <div>
+        <nav className="navbar">
+            <ul className="nav navbar-nav">
+                <li>
+                    <Link to="/home">Home</Link>
+                </li>
+                <li>
+                    <Link to="/signup">Signup</Link>
+                </li>
+                <li>
+                    <Link to="/login">Login</Link>
+                </li>
+                <li>
+                    <Link to='/candyform'>Candy Form</Link>
+                </li>
+            </ul>
+        </nav>
+    </div>
     );
 };
 

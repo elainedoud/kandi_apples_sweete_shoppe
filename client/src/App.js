@@ -4,12 +4,14 @@ import Signup from './Signup'
 import Candy from './Candy'
 import Header from './Header'
 import NavBar from './NavBar'
-import {Route, Switch} from 'react-router-dom';
+import Candyform from './Candyform'
+import {Route, Switch} from 'react-router-dom'
 import './App.css';
 
-function App (){
+function App ({makeNewCandy}){
 
   const [user, setUser] = useState({})
+  const [candies, setCandies] = useState([])
 
 useEffect(() => {
   fetch("/me")
@@ -31,11 +33,19 @@ useEffect(() => {
     })
   }
 
+  function makeNewCandy(newCandy){
+    const arraryNewCandies = [...candies, newCandy]
+    setCandies(arraryNewCandies)
+  }
+
   return (
       <div>
           <Header />
           <NavBar />
-            <Switch>
+          <Switch>
+            <Route path="/home">
+              <Candy />
+              </Route>
               <Route path="/login">
                 <Login user={user} setUser={setUser}/>
                 <button onClick={handleLogout}>Logout</button>
@@ -43,8 +53,10 @@ useEffect(() => {
               <Route path="/signup">
                 <Signup user={user} setUser={setUser}/>
               </Route>
+              <Route path="/candyform">
+                <Candyform makeNewCandy={makeNewCandy}/>
+              </Route>
             </Switch>
-          <Candy />
       </div>
   )
 }
