@@ -33,16 +33,16 @@ function Signup({user, setUser}){
     return (
         <div>
         <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="Signupform">
             <p>Signup: </p>
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username" className="sign">Username:</label>
             <input 
                 type="text"
                 id="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder = 'username'/>
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" className="sign">Password:</label>
             <input 
                 type="password"
                 id="password"
@@ -50,10 +50,10 @@ function Signup({user, setUser}){
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder = 'password'/>
             <label htmlFor="password_confirmation">Password Confirmation:</label>
-            <button type="submit">Signup</button>
+            <button type="submit" className="sign">Signup</button>
         </form>
         </div>
-        <div>
+        <div className="signuptext">
             {signedup ? <p>You are now signed up for our site and logged in</p> : null }
         </div>
         </div>
