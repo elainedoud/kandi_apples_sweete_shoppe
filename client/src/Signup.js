@@ -5,6 +5,7 @@ function Signup({user, setUser}){
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [errors, setErrors] = useState([])
+    const [signedup, setSignedup] = useState(false)
 
     function handleSubmit(e){
         e.preventDefault();
@@ -20,6 +21,7 @@ function Signup({user, setUser}){
         }).then((r) => {
             if (r.ok) {
                 r.json().then((user) => setUser(user));
+                setSignedup(true);
             } else {
                 r.json().then((err) => setErrors(err.errors));
             }
@@ -29,6 +31,7 @@ function Signup({user, setUser}){
     }
 
     return (
+        <div>
         <div>
         <form onSubmit={handleSubmit}>
             <p>Signup: </p>
@@ -49,6 +52,10 @@ function Signup({user, setUser}){
             <label htmlFor="password_confirmation">Password Confirmation:</label>
             <button type="submit">Signup</button>
         </form>
+        </div>
+        <div>
+            {signedup ? <p>You are now signed up for our site and logged in</p> : null }
+        </div>
         </div>
     );
 }

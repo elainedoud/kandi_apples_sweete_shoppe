@@ -2,16 +2,20 @@ import React,{useState, useEffect} from 'react'
 import Login from './Login'
 import Signup from './Signup'
 import Candy from './Candy'
+import Reviews from './Reviews'
 import Header from './Header'
 import NavBar from './NavBar'
 import Candyform from './Candyform'
+import Reviewform from './Reviewform'
 import {Route, Switch} from 'react-router-dom'
 import './App.css';
 
-function App ({makeNewCandy}){
+function App ({review}){
 
   const [user, setUser] = useState({})
   const [candies, setCandies] = useState([])
+  const [reviews, setReviews] = useState([])
+  const [loggedIn, setLoggedIn] = useState(true)
 
 useEffect(() => {
   fetch("/me")
@@ -20,13 +24,16 @@ useEffect(() => {
       res.json()
       .then (user => {
         setUser (user)
+        setLoggedIn(true)
       })
     } else {
+      setUser({})
+      setLoggedIn(false)
     }
   })
   }, [])
 
-  const handleLogout = () => {
+  function handleLogout() {
     setUser({})
     fetch('/logout', {
       method: 'DELETE'
@@ -36,6 +43,11 @@ useEffect(() => {
   function makeNewCandy(newCandy){
     const arraryNewCandies = [...candies, newCandy]
     setCandies(arraryNewCandies)
+  }
+
+  function makeNewReview(newReview){
+    const arraryNewReviews = [...reviews, newReview]
+    setReviews(arraryNewReviews)
   }
 
   return (
@@ -49,6 +61,7 @@ useEffect(() => {
               <Route path="/login">
                 <Login user={user} setUser={setUser}/>
                 <button onClick={handleLogout}>Logout</button>
+                {loggedIn ? <p>You are logged in</p> : <p>You are logged out</p> }
               </Route>
               <Route path="/signup">
                 <Signup user={user} setUser={setUser}/>
@@ -56,8 +69,14 @@ useEffect(() => {
               <Route path="/candyform">
                 <Candyform makeNewCandy={makeNewCandy}/>
               </Route>
+              <Route path="/reviews">
+                <Reviews />
+              </Route>
+              <Route path="/reviewform">
+                <Reviewform makeNewReview={makeNewReview} review={review}/>
+              </Route>
             </Switch>
-      </div>
+      </div>   
   )
 }
 

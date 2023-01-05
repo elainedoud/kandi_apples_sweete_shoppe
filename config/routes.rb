@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "/candy", to: "candies#index"
   post "/candy", to: "candies#create"
   get "/review", to: "reviews#index"
-  post "review", to: "reviews#create"
+  post "/review", to: "reviews#create"
 
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

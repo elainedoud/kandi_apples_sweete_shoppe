@@ -11,13 +11,11 @@ function Candy(){
     .then(data => setCandies(data))
   }, [])
 
-
-
     return (
         <div>
             {candies.map(candy =>{
                return <CandyCard key={candy.id} candy={candy}/>
-            })}     
+            })}    
         </div>
     );
 }

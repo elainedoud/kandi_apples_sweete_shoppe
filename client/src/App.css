@@ -24,6 +24,22 @@
   margin-right: 5px;
 }
 
-.misc {
-color: black;
+.Reviewbox{
+  color: black;
+  background-color: #ffb6c1;
+  padding: 0.5em 0.5em 0.5em;
+  border: .5px solid black;
+}
+
+.ReviewCandyName{
+  font-size: 10px;
+}
+
+.ReviewComment {
+  font-size: 8px;
+}
+
+.ReviewUserName {
+  font-size: 6.5px;
+  font-style: italic;
 }

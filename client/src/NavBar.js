@@ -19,6 +19,12 @@ function NavBar() {
                 <li>
                     <Link to='/candyform'>Candy Form</Link>
                 </li>
+                <li>
+                    <Link to='/reviews'>Reviews</Link>
+                </li>
+                <li>
+                    <Link to="/reviewform">Review Form</Link>
+                </li>
             </ul>
         </nav>
     </div>
