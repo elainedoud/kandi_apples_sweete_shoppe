@@ -36,13 +36,15 @@ function Login({user, setUser}) {
             type="text"
             onChange = {handleChangeUsername}
             value = {username}
-            placeholder = 'username' />
+            placeholder = 'username' 
+            className="login"/>
             <input 
             type="text" 
             onChange = {handleChangePassword}
             value = {password}
-            placeholder = 'password' />
-        <button type="submit">Login</button>
+            placeholder = 'password' 
+            className="login"/>
+        <button type="submit" class="logbutton">Login</button>
         </form>
         </div>
     );

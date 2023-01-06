@@ -1,3 +1,7 @@
+body{
+  border: 25px solid white;
+}
+
 .Candybox {
   color: black;
   padding: 0.5em 0.5em 0.5em;
@@ -44,11 +48,37 @@
   font-style: italic;
 }
 
-.Signupform {
-  padding: 3px;
-  margin: 10px;
+.sign {
+  display: block;
+  width: 250px;
+  padding: 5px;
 }
 
-.sign {
-  margin: 10px;
+.login {
+  display: block;
+  width: 250px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.logbutton {
+  margin-top: 5px;
+}
+
+.candyform {
+  display: block;
+  width: 250px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.title {
+  color: #AA336A;
+  font-size: 30px;
+}
+
+.nav {
+display: inline-block;
+margin: 3px;
+padding: 7px, 7px;
 }

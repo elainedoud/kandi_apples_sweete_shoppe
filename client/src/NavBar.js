@@ -6,26 +6,26 @@ function NavBar() {
     return (
     <div>
         <nav className="navbar">
-            <ul className="nav navbar-nav">
-                <li>
+            <p className="nav navbar-nav">
+                <label className='nav'>
                     <Link to="/home">Home</Link>
-                </li>
-                <li>
+                </label>
+                <label className='nav'>
                     <Link to="/signup">Signup</Link>
-                </li>
-                <li>
+                </label>
+                <label className='nav'>
                     <Link to="/login">Login</Link>
-                </li>
-                <li>
+                </label>
+                <label className='nav'>
                     <Link to='/candyform'>Candy Form</Link>
-                </li>
-                <li>
+                </label>
+                <label className='nav'>
                     <Link to='/reviews'>Reviews</Link>
-                </li>
-                <li>
+                </label>
+                <label className='nav'>
                     <Link to="/reviewform">Review Form</Link>
-                </li>
-            </ul>
+                </label>
+            </p>
         </nav>
     </div>
     );

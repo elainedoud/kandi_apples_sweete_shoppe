@@ -60,7 +60,7 @@ useEffect(() => {
               </Route>
               <Route path="/login">
                 <Login user={user} setUser={setUser}/>
-                <button onClick={handleLogout}>Logout</button>
+                <button onClick={handleLogout} class="logbutton">Logout</button>
                 {loggedIn ? <p>You are logged in</p> : <p>You are logged out</p> }
               </Route>
               <Route path="/signup">

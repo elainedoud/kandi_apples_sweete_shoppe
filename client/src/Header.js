@@ -3,7 +3,7 @@ import React from 'react'
 function Header( ){
     return (
         <>
-        <p>Kandi Apple's Sweete Shoppe</p>
+        <p className="title">Kandi Apple's Sweete Shoppe</p>
         </>
     )
 }
