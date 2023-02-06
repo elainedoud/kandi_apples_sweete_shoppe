@@ -8,7 +8,7 @@ function Candy(){
   useEffect(() => {
     fetch("/candy")
     .then (res => res.json())
-    .then(data => setCandies(data))
+    .then(candies => setCandies(candies))
   }, [])
 
     return (
