@@ -1,7 +1,7 @@
 class ReviewSerializer < ActiveModel::Serializer
-  attributes :id, :candy_id, :user_id, :comment
+  attributes :id, :candy_id, :customer_id, :comment
 
-  belongs_to :user
+  belongs_to :customer
   belongs_to :candy
   
 end

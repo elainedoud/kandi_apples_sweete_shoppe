@@ -12,7 +12,7 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
-    User.find_by(id: session[:user_id])
+    Customer.find_by(id: session[:customer_id])
   end
 
 end

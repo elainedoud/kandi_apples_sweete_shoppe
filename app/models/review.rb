@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
 
 belongs_to :candy 
-belongs_to :user 
+belongs_to :customer
 
 end

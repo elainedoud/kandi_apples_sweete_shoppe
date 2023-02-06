@@ -6,7 +6,7 @@ function ReviewCard({review}){
         <div className="Reviewbox">
             <p className="ReviewCandyName">{review.candy.name}</p>
             <p className="ReviewComment">{review.comment}</p>
-            <p className="ReviewUserName">{review.user.username}</p>
+            <p className="ReviewUserName">{review.customer.username}</p>
         </div>
     )
 }

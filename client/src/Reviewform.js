@@ -16,7 +16,7 @@ function Reviewform({makeNewReview, review}){
                 body: JSON.stringify({
                     candy_id: candyName,
                     comment: comment,
-                    user_id: userName
+                    customer_id: userName
                 })
      })
      .then(res => res.json())

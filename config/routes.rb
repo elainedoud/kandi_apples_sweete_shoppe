@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   
-  resources :users, only: [:create, :show]
+  resources :customers, only: [:create, :show]
 
-  get "/me", to: "users#show"
+  get "/me", to: "customers#show"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
-  post "/signup", to: "users#create"
+  post "/signup", to: "customers#create"
   get "/candy", to: "candies#index"
   post "/candy", to: "candies#create"
   get "/review", to: "reviews#index"

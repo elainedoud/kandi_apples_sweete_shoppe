@@ -33,16 +33,16 @@ category: "chewy")
 twelveth_candy = Candy.create(name: "Salt Water Taffy", image: "http://bit.ly/3YYh7or",
 category: "chewy")
 
-first_user = User.create(username: "bobsmith", password: "123")
-second_user = User.create(username: "patti", password: "123")
-third_user = User.create(username: "johndoe", password: "123")
+first_user = Customer.create(username: "bobsmith", password: "123")
+second_user = Customer.create(username: "patti", password: "123")
+third_user = Customer.create(username: "johndoe", password: "123")
 
-first_review = Review.create(candy: third_candy, user: first_user, comment: "They were delicious")
-second_review = Review.create(candy: fifth_candy, user: second_user, comment: "A bit stale")
-third_review = Review.create(candy: second_candy, user: third_user, comment: "Better than Hershey's")
-fourth_review = Review.create(candy: seventh_candy, user: third_user, comment: "Yummy!")
-fifth_review = Review.create(candy: fourth_candy, user: second_user, comment: "Love them - my favorite")
-sixth_review = Review.create(candy: tenth_candy, user: first_user, comment: "Good and remind me of being a kid")
+first_review = Review.create(candy: third_candy, customer: first_user, comment: "They were delicious")
+second_review = Review.create(candy: fifth_candy, customer: second_user, comment: "A bit stale")
+third_review = Review.create(candy: second_candy, customer: third_user, comment: "Better than Hershey's")
+fourth_review = Review.create(candy: seventh_candy, customer: third_user, comment: "Yummy!")
+fifth_review = Review.create(candy: fourth_candy, customer: second_user, comment: "Love them - my favorite")
+sixth_review = Review.create(candy: tenth_candy, customer: first_user, comment: "Good and remind me of being a kid")
 
 
 puts "Done seeding"

@@ -13,7 +13,7 @@ end
 private
 
 def review_params
-    params.permit(:candy_id, :user_id, :comment)
+    params.permit(:candy_id, :customer_id, :comment)
 end
 
 end

@@ -23,17 +23,17 @@ ActiveRecord::Schema.define(version: 2023_01_04_202903) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.string "comment"
-    t.integer "candy_id"
-    t.integer "user_id"
+  create_table "customers", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
+  create_table "reviews", force: :cascade do |t|
+    t.string "comment"
+    t.integer "candy_id"
+    t.integer "customer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
